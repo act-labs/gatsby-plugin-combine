@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gatsby-plugin-combine nodes selected based on slug and file type 1`] = `
+"
+    query SelectNodesQuery ($path: String) {
+        nodes: allMdx (filter:{
+            fields:{slug: {regex: $path} }
+        })        
+        {
+            edges {
+                node {
+                    id
+                    fileAbsolutePath
+                    fields {
+                        slug
+                    }
+                    
+                }
+            }
+        }
+    }
+    "
+`;
